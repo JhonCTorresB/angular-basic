@@ -1,0 +1,24 @@
+<h3>Agregar <small>{{ nuevo.nombre }}</small> </h3>
+        <hr>
+        <form (ngSubmit)="agregar(  )"> <!--ngSubmit YA NO ACTUALIZA TODA LA PANTALLA, PARA SU USO HAY Q IMPORTAR EN MODULE FormsModule-->
+            <input 
+                type="text"
+                placeholder="Nombre"
+                name="nombre"
+                [(ngModel)]="nuevo.nombre"
+            >
+            <!--LA llave [] cuadrada indica q hay una propiedad q queremos enlazarlo a value-->
+            <!--LA llave () parentesis toma el valor y lo muestra en consola-->
+
+            <input 
+                type="number" 
+                placeholder="Poder"
+                name="poder"
+                [(ngModel)]="nuevo.poder"
+                
+            >
+
+            <button type="submit">
+                Agregar
+            </button>
+        </form>
